@@ -258,7 +258,7 @@ export default function HackerPortfolio() {
 
                                     <p className="text-xs sm:text-sm md:text-base lg:text-lg text-green-400/80 mb-6 sm:mb-8 leading-relaxed">
                                         Étudiant à <a href={"https://ecolelamache.org"}>L'école la mache</a> en términale pro CIEL. Passionné par le développement web, la cybersécurité...
-                                        J'aimerais plus tard devenir pentester. Je suis actuellement à la recherche d'un stage de 6 semaines : du <strong>24 novembre au 20 janvier.</strong>
+                                        J'aimerais plus tard devenir pentester. Je suis actuellement à la recherche d'un stage de 6 semaines : du <strong>24 novembre au 20 janvier.</strong><img src={"https://github-readme-activity-graph.vercel.app/graph?username=luxinenglish&bg_color=000201&color=4ade80&line=4ade80&point=1c71d8&area=true&hide_border=true"} />
 
                                     </p>
 
