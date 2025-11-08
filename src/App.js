@@ -96,6 +96,13 @@ export default function HackerPortfolio() {
             tech: ['python'],
             href: '#',
             icon: Shield
+        },
+        {
+            title: 'APLOSN',
+            desc: "Association pour la promotion du libre de l'open source, et de la souvraineté numérique.",
+            tech: ['React', 'Tailwind CSS'],
+            href: 'https://aplosn.fr',
+            icon: Globe
         }
     ];
 
@@ -271,6 +278,13 @@ export default function HackerPortfolio() {
                                             <span className="absolute inset-0 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                                             <Mail className="w-3 h-3 sm:w-4 sm:h-4 relative z-10 group-hover:scale-110 transition-transform" />
                                             <a href={"mailto:j.brochard@aplosn.fr"}><span className="relative z-10">CONTACT</span></a>
+                                        </button>
+                                        <button
+                                            /*onClick={() => handleNavigate('contact')}*/
+                                            className="relative px-4 py-2.5 sm:px-6 sm:py-3 bg-green-500 text-black hover:bg-green-400 transition-all duration-300 flex items-center justify-center gap-2 group overflow-hidden text-xs sm:text-sm md:text-base"
+                                        >
+                                            <span className="absolute inset-0 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                                            <a href={"https://aplosn.fr"}><span className="relative z-10">Mon asso</span></a>
                                         </button>
                                     </div>
 
