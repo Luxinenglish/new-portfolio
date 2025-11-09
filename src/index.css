@@ -14,3 +14,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.glitch {
+    animation: glitch 0.3s infinite;
+}
+
+.glitch:hover {
+    animation: glitch 0.1s infinite;
+}
+
+@keyframes luxFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        text-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e, 0 0 30px #22c55e;
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e, 0 0 60px #22c55e, 0 0 80px #22c55e;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e, 0 0 60px #22c55e, 0 0 80px #22c55e;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+        text-shadow: 0 0 5px #22c55e;
+    }
+}
+
+@keyframes zoomIntoU {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e;
+    }
+    50% {
+        transform: scale(1.5);
+        text-shadow: 0 0 40px #22c55e, 0 0 80px #22c55e, 0 0 120px #22c55e;
+    }
+    100% {
+        transform: scale(50);
+        text-shadow: 0 0 100px #22c55e, 0 0 200px #22c55e, 0 0 300px #22c55e;
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+}
+
+.lux-animation {
+    animation: luxFade 3s ease-in-out forwards;
+}
+
+.lux-u-zoom {
+    display: inline-block;
+    animation: zoomIntoU 3s ease-in-out 0s forwards;
+}
+
+@media (max-width: 640px) {
+    .glitch {
+        animation: glitch 0.5s infinite;
+    }
+}
