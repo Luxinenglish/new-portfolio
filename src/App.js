@@ -10,7 +10,8 @@ export default function HackerPortfolio() {
     const [showContent, setShowContent] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const fullText = '> Initializing neural interface...';
-
+    const month = new Date().getMonth();
+    const isWinter = month === 10 || month === 11 || month === 0; // November, December, January
     const bootMessages = [
         '> SYSTEM BOOT SEQUENCE INITIATED...',
         '> Loading kernel modules... [OK]',
@@ -58,15 +59,41 @@ export default function HackerPortfolio() {
 
     useEffect(() => {
         const columns = window.innerWidth < 640 ? 30 : 50;
+        if (isWinter) {
+            // Snowflake particles
+            const flakes = Array.from({ length: columns }).map(() => ({
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                size: 8 + Math.random() * 14,
+                speed: 0.2 + Math.random() * 1.2
+            }));
+            setMatrixRain(flakes);
+            const interval = setInterval(() => {
+                setMatrixRain(prev =>
+                    prev.map(f => {
+                        const ny = f.y + f.speed;
+                        if (ny > 110) {
+                            return {
+                                x: Math.random() * 100,
+                                y: -10,
+                                size: 8 + Math.random() * 14,
+                                speed: 0.2 + Math.random() * 1.2
+                            };
+                        }
+                        return { ...f, y: ny };
+                    })
+                );
+            }, 50);
+            return () => clearInterval(interval);
+        } else {
         const drops = Array(columns).fill(0).map(() => Math.random() * 100);
         setMatrixRain(drops);
-
         const interval = setInterval(() => {
             setMatrixRain(prev => prev.map(y => (y > 100 ? 0 : y + 1)));
         }, 50);
-
         return () => clearInterval(interval);
-    }, []);
+        }
+    }, [isWinter]);
 
     const projects = [
         {
@@ -157,9 +184,23 @@ export default function HackerPortfolio() {
 
             {showContent && (
                 <>
-                    {/* Matrix Rain Effect */}
                     <div className="fixed inset-0 opacity-50 pointer-events-none">
-                        {matrixRain.map((y, i) => (
+                        {isWinter ? matrixRain.map((f, i) => (
+                            <div
+                                key={i}
+                                className="absolute text-white"
+                                style={{
+                                    left: `${f.x}%`,
+                                    top: `${f.y}%`,
+                                    fontSize: `${f.size}px`,
+                                    transform: 'translateX(-50%)',
+                                    pointerEvents: 'none'
+                                }}
+                                aria-hidden="true"
+                            >
+                                ❄
+                            </div>
+                        )) : matrixRain.map((y, i) => (
                             <div
                                 key={i}
                                 className="absolute text-green-500 text-xs"
