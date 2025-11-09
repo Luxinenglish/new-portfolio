@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X } from 'lucide-react';
+import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, TramFrontIcon} from 'lucide-react';
 
 export default function HackerPortfolio() {
     const [displayText, setDisplayText] = useState('');
@@ -97,11 +97,18 @@ export default function HackerPortfolio() {
 
     const projects = [
         {
-            title: 'Facial Recognition',
-            desc: 'Système de reconnaissance faciale pour identifier les individus en temps réel.',
+            title: 'TCL - App [Private Repo]',
+            desc: 'Web App qui permet de voir en direct les emplacements de transports lyonnais',
+            tech: ['React', 'Tailwind CSS', 'API TCL'],
+            href: 'https://github.com/Luxinenglish/tcl_app',
+            icon: TramFront
+        },
+        {
+            title: 'auto-deploy-nginx-website',
+            desc: 'un simple script pour deployer un site web avec nginx',
             tech: ['Python'],
-            href: '#',
-            icon: Cpu
+            href: 'https://github.com/Luxinenglish/auto-deploy-nginx-website',
+            icon: Server
         },
         {
             title: 'Minecraft Launcher',
@@ -115,14 +122,14 @@ export default function HackerPortfolio() {
             desc: 'Script bash pour déployer automatiquement un proxy Nginx avec SSL.',
             tech: ['Bash', 'Nginx'],
             href: 'https://github.com/Luxinenglish/auto-deploy-nginx-proxy',
-            icon: Globe
+            icon: Server
         },
         {
             title: 'Russian Roulette Game',
             desc: 'Jeu de roulette russe qui supprime ton os',
             tech: ['python'],
-            href: '#',
-            icon: Shield
+            href: 'https://github.com/Luxinenglish/roullette-russe',
+            icon: Laptop
         },
         {
             title: 'APLOSN',
