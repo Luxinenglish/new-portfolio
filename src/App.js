@@ -408,6 +408,15 @@ export default function HackerPortfolio() {
                                                     <li><span className="text-green-500">•</span> Cybersécurité & Ethical Hacking</li>
                                                     <li><span className="text-green-500">•</span> Intelligence Artificielle</li>
                                                     <li><span className="text-green-500">•</span> Open Source & Souveraineté numérique</li>
+                                                    <div className="w-full">
+                                                      <iframe
+                                                        src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4379325"
+                                                        title="TryHackMe Badges"
+                                                        className="border-0 w-full h-24 sm:h-32 md:h-40"
+                                                        style={{ minHeight: '80px' }}
+                                                        loading="lazy"
+                                                      />
+                                                    </div>
                                                 </ul>
                                             </div>
 
