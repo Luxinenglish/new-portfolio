@@ -312,12 +312,10 @@ export default function HackerPortfolio() {
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
                                 {/* Logo */}
-                                <a href="https://portfolio.pixelserver.fr">
-                                    <div className="flex items-center gap-2 text-green-500">
+                                <button type="button" onClick={() => handleNavigate('home')} className="flex items-center gap-2 text-green-500" aria-label="Home">
                                         <Terminal className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
                                         <span className="text-lg sm:text-xl md:text-2xl font-bold glitch" data-text="[HACKER]">[Lux_]</span>
-                                    </div>
-                                </a>
+                                </button>
 
                                 {/* Desktop Menu */}
                                 <div className="hidden md:flex gap-4 lg:gap-6">
