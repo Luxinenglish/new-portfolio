@@ -1,3 +1,8 @@
+/* TODO Importer React Icons*/
+/* TODO ajouter discord aux reseau sur la page home*/
+/* TODO fix les 2/3 erreurs qui se prommenent*/
+/* TODO ajouter Twitter aux reseau sur la page home (nouveau logo)*/
+
 import React, { useState, useEffect } from 'react';
 import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, TramFrontIcon, Link as LinkIcon } from 'lucide-react';
 
