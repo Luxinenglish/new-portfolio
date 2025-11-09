@@ -97,7 +97,7 @@ export default function HackerPortfolio() {
 
     const projects = [
         {
-            title: 'TCL - App [Private Repo]',
+            title: 'TCL - App [Private Repo] (not-official)',
             desc: 'Web App qui permet de voir en direct les emplacements de transports lyonnais',
             tech: ['React', 'Tailwind CSS', 'API TCL'],
             href: 'https://github.com/Luxinenglish/tcl_app',
@@ -133,7 +133,7 @@ export default function HackerPortfolio() {
         },
         {
             title: 'APLOSN',
-            desc: "Association pour la promotion du libre de l'open source, et de la souvraineté numérique.",
+            desc: "Association pour la promotion du libre de l'open source, et de la souvraineté numérique. Dont je suis le président",
             tech: ['React', 'Tailwind CSS'],
             href: 'https://aplosn.fr',
             icon: Globe
@@ -210,8 +210,25 @@ export default function HackerPortfolio() {
         tags: ['Web', 'JavaScript', 'Auth'],
         link: 'https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentification'
       },
+        {
+            id: 'c3',
+            title: 'Javascript - Obfuscation 1',
+            difficulty: 'Very-Easy',
+            desc: 'Utilisation de la méthode unescape() pour décoder la chaîne de caractère hexadécimale.',
+            tags: ['Web', 'JavaScript', 'Obfuscation'],
+            link: 'https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-1?action_solution=voir&debut_affiche_solutions=0#pagination_affiche_solutions',
+
+        },
+        {
+            id: "c3a",
+            title: 'Javascript - Obfuscation 2',
+            difficulty: 'Very-Easy',
+            desc: 'Déobfusquez le code JavaScript pour trouver le mot de passe permettant de valider l’épreuve.',
+            tags: ['Web', 'JavaScript', 'Obfuscation'],
+            link: 'https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-2',
+        },
       {
-        id: 'c3',
+        id: 'c4',
         title: 'XSS - Stockée 1\n',
         difficulty: 'Easy',
         desc: 'Volez le cookie de session de l’administrateur et utilisez le pour valider l’épreuve.',
@@ -252,7 +269,7 @@ export default function HackerPortfolio() {
                         </h1>
                     </div>
                 </div>
-            )}
+                )}
 
             {showContent && (
                 <>
