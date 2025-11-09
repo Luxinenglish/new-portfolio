@@ -2,6 +2,8 @@
 /* TODO ajouter discord aux reseau sur la page home*/
 /* TODO fix les 2/3 erreurs qui se prommenent*/
 /* TODO ajouter Twitter aux reseau sur la page home (nouveau logo)*/
+/* TODO Optimiser en mettant sur plusieurs pages*/
+
 
 import React, { useState, useEffect } from 'react';
 import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, TramFrontIcon, Link as LinkIcon } from 'lucide-react';
