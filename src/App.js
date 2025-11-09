@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, TramFrontIcon} from 'lucide-react';
+import { Terminal, Code, Globe, Mail, Github, Linkedin, Cpu, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, TramFrontIcon, Link as LinkIcon } from 'lucide-react';
 
 export default function HackerPortfolio() {
     const [displayText, setDisplayText] = useState('');
@@ -154,6 +154,62 @@ export default function HackerPortfolio() {
         setMobileMenuOpen(false);
     };
 
+    const rooms = [
+      {
+        id: 'r1',
+        title: 'Custom VPN Room',
+        platform: 'TryHackMe',
+        platformIcon: Globe,
+        desc: 'Room about building and attacking a custom VPN stack. Includes lab, writeup and CTF tasks.',
+        tags: ['Networking', 'OpenVPN', 'Pentesting'],
+        link: 'https://tryhackme.com/room/customvpn'
+      },
+      {
+        id: 'r2',
+        title: 'WebAuth Lab',
+        platform: 'HackTheBox',
+        platformIcon: Terminal,
+        desc: 'A practical room exploring modern web auth flows, SSO and token bypass exercises.',
+        tags: ['Web', 'Auth', 'JWT'],
+        link: 'https://www.hackthebox.com/rooms/webauth'
+      },
+      {
+        id: 'r3',
+        title: 'Linux PrivEsc Workshop',
+        platform: 'Root-Me',
+        platformIcon: Shield,
+        desc: 'Collection of local Linux privilege escalation scenarios with hints and solutions.',
+        tags: ['Linux', 'PrivEsc', 'Scripting'],
+        link: 'https://www.root-me.org/en/rooms/linux-privesc'
+      }
+    ];
+
+    const challenges = [
+      {
+        id: 'c1',
+        title: 'SSTI in Flask App',
+        difficulty: 'Medium',
+        desc: 'Exploit a server-side template injection to achieve remote code execution.',
+        tags: ['SSTI', 'Python', 'RCE'],
+        link: 'https://gist.github.com/yourusername/ssti-writeup'
+      },
+      {
+        id: 'c2',
+        title: 'Broken JWT Signature',
+        difficulty: 'Hard',
+        desc: 'Forge token by abusing algorithm confusion and recover secret key.',
+        tags: ['JWT', 'Crypto', 'Auth'],
+        link: 'https://yourblog.example/jwt-writeup'
+      },
+      {
+        id: 'c3',
+        title: 'Nginx Auto-deploy CTF',
+        difficulty: 'Easy',
+        desc: 'Automated nginx deploy script used in a CTF environment to serve challenges.',
+        tags: ['Bash', 'Nginx', 'Automation'],
+        link: 'https://github.com/Luxinenglish/auto-deploy-nginx-website'
+      }
+    ];
     return (
         <div className="min-h-screen bg-black text-green-400 font-mono relative overflow-hidden">
             {/* Boot Sequence */}
@@ -239,7 +295,7 @@ export default function HackerPortfolio() {
 
                                 {/* Desktop Menu */}
                                 <div className="hidden md:flex gap-4 lg:gap-6">
-                                    {['home', 'projects', 'skills', 'whoami'].map(section => (
+                                    {['home', 'projects', 'skills', 'whoami', 'rooms'].map(section => (
                                         <button
                                             key={section}
                                             onClick={() => handleNavigate(section)}
@@ -265,7 +321,7 @@ export default function HackerPortfolio() {
                             {/* Mobile Menu */}
                             {mobileMenuOpen && (
                                 <div className="md:hidden border-t border-green-500/30 py-4 space-y-2 bg-black/95">
-                                    {['home', 'projects', 'skills', 'whoami'].map(section => (
+                                    {['home', 'projects', 'skills', 'whoami', 'rooms'].map(section => (
                                         <button
                                             key={section}
                                             onClick={() => handleNavigate(section)}
@@ -552,6 +608,116 @@ export default function HackerPortfolio() {
                             </div>
                         </section>
                     )}
+{currentSection === 'rooms' && (
+<section className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto">
+    <header className="mb-8 sm:mb-10">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <Terminal className="w-6 h-6 text-green-500" />
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-green-300">Rooms &amp; Challenges</h2>
+        </div>
+      </div>
+      <p className="text-sm text-green-400/80 mt-3 max-w-3xl">
+        Cards list of rooms published on different platforms and challenges solved with links and short descriptions.
+      </p>
+    </header>
+
+    <main className="space-y-8 sm:space-y-10">
+      <section>
+        <h3 className="text-lg sm:text-xl font-bold text-green-300 mb-4">$ ls rooms/</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {rooms.map((r) => {
+            const Icon = r.platformIcon || Globe;
+            return (
+              <article
+                key={r.id}
+                className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg hover:scale-102 transition-transform duration-200 flex"
+              >
+                <div className="flex-shrink-0 flex items-start">
+                  <div className="p-2 sm:p-3 bg-green-500/10 border border-green-500/20 rounded">
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-green-400" />
+                                </div>
+                    </div>
+                <div className="flex-1 ml-3">
+                  <div className="flex items-start justify-between">
+                    <h4 className="font-bold text-green-300 text-sm sm:text-base md:text-lg">{r.title}</h4>
+                    <span className="text-xs text-green-500/80 ml-3">{r.platform}</span>
+                  </div>
+                  <p className="text-green-400/80 text-xs sm:text-sm mt-2">{r.desc}</p>
+
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {r.tags.map((t) => (
+                      <span key={t} className="text-xs px-2 py-1 border border-green-500/30 rounded">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                  <div className="mt-3 sm:mt-4 flex items-center gap-3">
+                      <a
+                        href={r.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      className="text-xs sm:text-sm text-green-500 hover:text-green-300 flex items-center gap-2"
+                      >
+                        <LinkIcon className="w-4 h-4" /> View room
+                      </a>
+                    <button
+                      onClick={() => navigator.clipboard?.writeText(r.link)}
+                      aria-label={`Copy link for ${r.title}`}
+                      className="text-xs sm:text-sm text-green-500/80 hover:text-green-300"
+                      >
+                        Copy link
+                    </button>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section>
+        <h3 className="text-lg sm:text-xl font-bold text-green-300 mb-4">$ cat challenges.log</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {challenges.map((c) => (
+            <article
+              key={c.id}
+              className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg transform transition-transform duration-200 hover:-translate-y-1 sm:hover:-translate-y-2"
+            >
+              <div className="flex items-start justify-between">
+                <div className="pr-3 flex-1">
+                  <h4 className="font-bold text-green-300 text-sm sm:text-base">{c.title}</h4>
+                  <p className="text-green-400/80 text-xs sm:text-sm mt-1">{c.desc}</p>
+                </div>
+                <div className="text-xs sm:text-sm text-green-500/90 whitespace-nowrap">{c.difficulty}</div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mt-3">
+                {c.tags.map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 border border-green-500/30 rounded">{t}</span>
+                ))}
+              </div>
+
+              <div className="mt-3 sm:mt-4">
+                <a
+                  href={c.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm text-green-500 hover:text-green-300"
+                >
+                  <Code className="w-4 h-4" /> Read writeup / repo
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+                            </div>
+                        </section>
+)}
             {/* Snow Footer */}
                 <footer className="relative w-full mt-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="180" viewBox="0 0 1200 180" role="img" aria-label="Sol enneigé" className="w-full h-auto">
