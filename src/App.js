@@ -365,7 +365,7 @@ export default function HackerPortfolio() {
                                         <div className="lg:w-1/3 flex justify-center lg:justify-start">
                                             <div className="relative group">
                                                 {/* Christmas Hat SVG */}
-                                                <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 translate-x-3 w-24 sm:w-32 h-auto z-10" style={{ transform: 'translateX(-110%) translateY(80%) rotate(-35deg) scale(1.2)' }}>
+                                                <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 translate-x-3 w-24 sm:w-32 h-auto z-10" style={{ transform: 'translateX(-105%) translateY(80%) rotate(-35deg) scale(1.2)' }}>
                                                     <svg viewBox="0 0 371 255.44" className="w-full h-auto drop-shadow-lg" style={{ transform: 'scale(1.2)', transformOrigin: '50% 50%' }}>
                                                         <path fill="#f91c1c" d="M363.94,178.43c-5.59-8.39-14.15-14.06-25.48-16.89-4.55-15.15-26.18-78.29-82.99-128.32C231.71,12.29,190.6-6.81,146.5,2.35c-49.91,10.37-78.9,51.88-94.44,84.93l-8.61,16.86c-2.63-1.35-5.59-2.08-8.68-2.08-9.61,0-17.59,7.14-18.9,16.39-9,1.54-15.87,9.39-15.87,18.82,0,4.14,1.33,8.09,3.72,11.32-2.39,3.24-3.72,7.18-3.72,11.33,0,8.94,6.19,16.47,14.5,18.53,1.63,8.88,9.43,15.63,18.78,15.63,4.36,0,8.52-1.5,11.85-4.13,3.32,2.63,7.48,4.13,11.84,4.13,8.31,0,15.45-5.36,18.04-12.88,9.19-1.37,16.26-9.32,16.26-18.88,0-3.91-1.2-7.66-3.36-10.8,2.84-3.38,4.46-7.71,4.46-12.26,0-2.38-.44-4.66-1.24-6.76,4.64-7.35,19.91-29.23,37.68-30-7.36,19.03-15.65,43.79-17.69,63.24-4.3,2.09-8.18,4.45-11.53,7.09-9.12,7.16-14.23,16.06-15.19,26.45-.89,3.85-5.37,27.46,13.42,41.82,13.27,10.14,51.25,14.34,130.48,14.34,2.17,0,4.38,0,6.62-.01,59.08-.17,105.44-1.25,120.15-13.24,7.32-5.98,12.23-14.55,14.59-25.5.45-1.87,5-22.12-5.72-38.26Z"/>
                                                         <path fill="#fff" d="M358.97,214.11c-.02.07-.04.13-.05.19-1.82,8.48-5.45,14.99-10.81,19.36-12.85,10.49-73.25,10.66-113.22,10.77-49.01.15-115.85-.96-130.39-12.07-14.2-10.85-9.54-30.01-9.33-30.82.08-.31.07-11.3,11.21-20.06,3.28-2.58,7.26-4.91,11.91-7,.18-.06.34-.14.51-.22,23.31-10.24,63.26-14.45,117.1-12.21,49.93,2.07,94.34,9.07,94.82,9.15,1.06.18,16.25,1.64,24.02,13.27,8.33,12.46,4.26,29.49,4.23,29.64ZM76.76,155.66c-1.56-1.08-2.46-2.89-2.37-4.79.09-1.89,1.16-3.61,2.82-4.54,2.57-1.43,4.16-4.14,4.16-7.07,0-4.46-3.63-8.09-8.09-8.09-.28,0-.61.03-1.02.08-1.86.23-3.7-.49-4.9-1.92-1.2-1.43-1.59-3.37-1.04-5.16.24-.77.36-1.58.36-2.39,0-4.46-3.63-8.09-8.09-8.09-2.86,0-5.54,1.54-6.99,4.03-1.01,1.74-2.88,2.79-4.89,2.73s-3.83-1.2-4.75-2.99c-1.4-2.71-4.15-4.4-7.19-4.4-4.46,0-8.09,3.63-8.09,8.09,0,.55.06,1.1.17,1.64.36,1.79-.18,3.64-1.45,4.94-1.27,1.31-3.1,1.9-4.89,1.59-.53-.1-.99-.14-1.42-.14-4.46,0-8.09,3.63-8.09,8.09,0,2.71,1.36,5.23,3.63,6.74,1.53,1.02,2.45,2.74,2.45,4.58s-.92,3.56-2.45,4.58c-2.27,1.51-3.63,4.03-3.63,6.75,0,4.45,3.63,8.08,8.09,8.08l.41-.02c1.62-.09,3.18.54,4.29,1.72,1.1,1.17,1.64,2.77,1.46,4.38-.04.34-.06.64-.06.91,0,4.46,3.63,8.09,8.09,8.09,2.91,0,5.62-1.58,7.05-4.14.98-1.73,2.81-2.8,4.8-2.8s3.82,1.07,4.79,2.8c1.44,2.56,4.14,4.14,7.05,4.14,4.27,0,7.81-3.34,8.06-7.6.09-1.52.8-2.93,1.97-3.9,1.16-.98,2.68-1.42,4.19-1.24.38.05.71.07.99.07,4.46,0,8.09-3.63,8.09-8.09,0-2.65-1.32-5.14-3.51-6.66Z"/>
@@ -536,6 +536,48 @@ export default function HackerPortfolio() {
                             </div>
                         </section>
                     )}
+            {/* Snow Footer */}
+                <footer className="relative w-full mt-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="180" viewBox="0 0 1200 180" role="img" aria-label="Sol enneigé" className="w-full h-auto">
+                <defs>
+                <linearGradient id="snowGrad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stopColor="#ffffff"/>
+                <stop offset="1" stopColor="#f0f6ff"/>
+                </linearGradient>
+                <linearGradient id="shadeGrad" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stopColor="#ffffff" stopOpacity="0.98"/>
+                <stop offset="1" stopColor="#e9f1ff" stopOpacity="1"/>
+                </linearGradient>
+                <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+                <feOffset in="blur" dx="0" dy="6" result="off"/>
+                <feMerge>
+                <feMergeNode in="off"/>
+                <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+                </filter>
+                </defs>
+                <rect x="0" y="0" width="1200" height="80" fill="none"/>
+                <g filter="url(#softShadow)">
+                <path d="M0 70 C120 50 260 55 420 75 C560 95 700 55 860 75 C980 90 1100 65 1200 80 L1200 180 L0 180 Z" fill="url(#snowGrad)"/>
+                </g>
+                <path d="M0 80 C160 65 300 72 420 88 C560 103 700 78 860 93 C980 105 1100 85 1200 95" fill="none" stroke="#f7fbff" strokeWidth="2" opacity="0.85"/>
+                <g opacity="0.9">
+                <ellipse cx="120" cy="115" rx="12" ry="4" fill="#ffffff" opacity="0.8"/>
+                <ellipse cx="260" cy="120" rx="8" ry="3" fill="#ffffff" opacity="0.75"/>
+                <ellipse cx="480" cy="118" rx="10" ry="4" fill="#ffffff" opacity="0.78"/>
+                <ellipse cx="740" cy="117" rx="9" ry="3.5" fill="#ffffff" opacity="0.76"/>
+                <ellipse cx="980" cy="112" rx="14" ry="5" fill="#ffffff" opacity="0.82"/>
+                <ellipse cx="600" cy="200" rx="540" ry="18" fill="#cfdff7" opacity="0.06"/>
+                <ellipse cx="600" cy="160" rx="540" ry="18" fill="#cfdff7" opacity="0.06"/>
+                </g>
+                </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10" style={{ marginTop: '50px' }}>
+                        <p className="text-gray-600 text-xs sm:text-sm padding-bottom-4">
+                            © 2025 Lux_ - Fait avec ❤️ et beaucoup de ☕
+                        </p>
+                    </div>
+                </footer>
                 </>
             )}
         </div>
