@@ -461,7 +461,7 @@ export default function HackerPortfolio() {
                                     {projects.map((project, i) => (
                                         <div
                                             key={i}
-                                            className="border-2 border-green-500/30 bg-black/50 p-4 sm:p-5 md:p-6 hover:border-green-500 hover:scale-105 transition-all duration-300 group"
+                                            className="border-2 border-green-500/30 bg-black/50 backdrop-blur-sm p-4 sm:p-5 md:p-6 hover:border-green-500 hover:scale-105 transition-all duration-300 group"
                                             style={{ animationDelay: `${i * 0.1}s` }}
                                         >
                                             <project.icon className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-green-500 group-hover:animate-spin transition-transform" />
