@@ -157,57 +157,66 @@ export default function HackerPortfolio() {
     const rooms = [
       {
         id: 'r1',
-        title: 'Custom VPN Room',
+        title: 'Basic pentesting',
         platform: 'TryHackMe',
-        platformIcon: Globe,
-        desc: 'Room about building and attacking a custom VPN stack. Includes lab, writeup and CTF tasks.',
-        tags: ['Networking', 'OpenVPN', 'Pentesting'],
-        link: 'https://tryhackme.com/room/customvpn'
+        platformIcon: Server,
+        desc: 'This is a machine that allows you to practise web app hacking and privilege escalation\n',
+        tags: ['BruteForce', 'Privesc', 'Scan'],
+        link: 'https://tryhackme.com/room/basicpentestingjt'
       },
       {
         id: 'r2',
-        title: 'WebAuth Lab',
-        platform: 'HackTheBox',
+        title: 'Offensive Security Intro',
+        platform: 'TryHackMe',
         platformIcon: Terminal,
-        desc: 'A practical room exploring modern web auth flows, SSO and token bypass exercises.',
-        tags: ['Web', 'Auth', 'JWT'],
-        link: 'https://www.hackthebox.com/rooms/webauth'
+        desc: 'Hack your first website (legally in a safe environment) and experience an ethical hacker\'s job.',
+        tags: ['Web', 'Auth'],
+        link: 'https://tryhackme.com/room/offensivesecurityintro'
       },
       {
         id: 'r3',
-        title: 'Linux PrivEsc Workshop',
-        platform: 'Root-Me',
+        title: 'Dig Dug',
+        platform: 'TryHackMe',
         platformIcon: Shield,
-        desc: 'Collection of local Linux privilege escalation scenarios with hints and solutions.',
-        tags: ['Linux', 'PrivEsc', 'Scripting'],
+        desc: 'Turns out this machine is a DNS server - it\'s time to get your shovels out!',
+        tags: ['DNS'],
         link: 'https://www.root-me.org/en/rooms/linux-privesc'
-      }
+      },
+        {
+            id: 'r4',
+            title: 'Neighbor',
+            platform: 'TryHackMe',
+            platformIcon: Laptop2,
+            desc: 'Check out our new cloud service, Authentication Anywhere. Can you find other user\'s secrets?',
+            tags: ['Auth', 'Cloud'],
+        }
     ];
 
     const challenges = [
       {
         id: 'c1',
-        title: 'SSTI in Flask App',
-        difficulty: 'Medium',
-        desc: 'Exploit a server-side template injection to achieve remote code execution.',
-        tags: ['SSTI', 'Python', 'RCE'],
-        link: 'https://gist.github.com/yourusername/ssti-writeup'
+        title: 'HTML - boutons désactivés',
+        difficulty: 'Very-Easy',
+        desc: 'Ce formulaire est désactivé et ne peut pas être utilisé. À vous de trouver le moyen de l’utiliser tout de même.\n' +
+            '\n',
+        tags: ['Web', 'HTML', 'Form'],
+        link: 'https://www.root-me.org/fr/Challenges/Web-Client/HTML-boutons-desactives'
       },
       {
         id: 'c2',
-        title: 'Broken JWT Signature',
-        difficulty: 'Hard',
-        desc: 'Forge token by abusing algorithm confusion and recover secret key.',
-        tags: ['JWT', 'Crypto', 'Auth'],
-        link: 'https://yourblog.example/jwt-writeup'
+        title: 'Javascript - Authentification\n',
+        difficulty: 'Very-Easy',
+        desc: 'identifier comment est gérer l’authentification',
+        tags: ['Web', 'JavaScript', 'Auth'],
+        link: 'https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentification'
       },
       {
         id: 'c3',
-        title: 'Nginx Auto-deploy CTF',
+        title: 'XSS - Stockée 1\n',
         difficulty: 'Easy',
-        desc: 'Automated nginx deploy script used in a CTF environment to serve challenges.',
-        tags: ['Bash', 'Nginx', 'Automation'],
-        link: 'https://github.com/Luxinenglish/auto-deploy-nginx-website'
+        desc: 'Volez le cookie de session de l’administrateur et utilisez le pour valider l’épreuve.',
+        tags: ['Web', 'XSS'],
+        link: 'https://www.root-me.org/fr/Challenges/Web-Client/XSS-Stockee-1'
       }
     ];
     return (
@@ -464,15 +473,6 @@ export default function HackerPortfolio() {
                                                     <li><span className="text-green-500">•</span> Cybersécurité & Ethical Hacking</li>
                                                     <li><span className="text-green-500">•</span> Intelligence Artificielle</li>
                                                     <li><span className="text-green-500">•</span> Open Source & Souveraineté numérique</li>
-                                                    <div className="w-full">
-                                                      <iframe
-                                                        src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4379325"
-                                                        title="TryHackMe Badges"
-                                                        className="border-0 w-full h-24 sm:h-32 md:h-40"
-                                                        style={{ minHeight: '80px' }}
-                                                        loading="lazy"
-                                                      />
-                                                    </div>
                                                 </ul>
                                             </div>
 
@@ -524,6 +524,31 @@ export default function HackerPortfolio() {
                                                         <span className="text-green-500">Domaine :</span> Cybersécurité, Pentesting, Développement
                                                     </p>
                                                 </div>
+                                            </div>
+                                            <div className="border-l-2 border-green-500/50 pl-4">
+                                                <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ ls comptes/</h3>
+                                                <p>liens vers mes differents comptes :</p>
+                                                <ul className="space-y-2 text-green-400/90">
+                                                    <li>
+                                                      <p>• <a href="https://www.root-me.org/Lux-802245" className="text-green-300 hover:text-green-200 underline">
+                                                        <span className="text-green-500"></span>Root-Me
+                                                      </a></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>• <a href="https://ctf.hackthebox.com/team/overview/158330" className="text-green-300 hover:text-green-200 underline">
+                                                            <span className="text-green-500"></span>HackTheBox
+                                                        </a></p>
+                                                    </li>
+                                                    <div className="w-full">
+                                                        <iframe
+                                                            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4379325"
+                                                            title="TryHackMe Badges"
+                                                            className="border-0 w-full h-24 sm:h-32 md:h-40"
+                                                            style={{ minHeight: '80px' }}
+                                                            loading="lazy"
+                                                        />
+                                                    </div>
+                                                </ul>
                                             </div>
 
                                             <div className="pt-4 border-t border-green-500/30">
