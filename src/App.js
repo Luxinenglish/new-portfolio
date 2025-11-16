@@ -1,7 +1,6 @@
 /* TODO Importer React Icons*/
 /* TODO ajouter discord aux reseau sur la page home*/
 /* TODO patch l'erreur ligne 51 (si supprimer alors ca casse trout)*/
-/* TODO ajouter Twitter aux reseau sur la page home (nouveau logo)*/
 /* TODO Optimiser en mettant sur plusieurs pages*/
 
 
