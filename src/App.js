@@ -6,7 +6,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { Terminal, Code, Globe, Mail, Github, Linkedin, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, Link as LinkIcon } from 'lucide-react';
+import { Terminal, Code, Globe, Mail, Github, Linkedin, Shield, Zap, Menu, X, Server, Laptop, Laptop2, TramFront, Link as LinkIcon, TwitterIcon } from 'lucide-react';
 
 export default function HackerPortfolio() {
     const [displayText, setDisplayText] = useState('');
@@ -424,7 +424,8 @@ export default function HackerPortfolio() {
                                         {[
                                             { Icon: Github, label: 'GitHub', href: 'https://github.com/luxinenglish'},
                                             { Icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/joam-brochard-290a2b2a0' },
-                                            { Icon: Mail, label: 'Email', href: 'mailto:j.brochard@aplosn.fr' }
+                                            { Icon: Mail, label: 'Email', href: 'mailto:j.brochard@aplosn.fr' },
+                                            { Icon: TwitterIcon, label: 'twitter', href: 'https://twitter.com/lux_in_french' },
                                         ].map(({ Icon, label, href }, i) => (
                                             <a
                                                 key={i}
