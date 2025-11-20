@@ -7,7 +7,7 @@ export const rooms = [
         title: 'Basic pentesting',
         platform: 'TryHackMe',
         platformIcon: Server,
-        desc: 'This is a machine that allows you to practise web app hacking and privilege escalation\n',
+        desc: 'Il s\'agit d\'une machine qui vous permet de vous entraîner au piratage d\'applications web et à l\'élévation de privilèges.\n',
         tags: ['BruteForce', 'Privesc', 'Scan'],
         link: 'https://tryhackme.com/room/basicpentestingjt'
     },
@@ -16,7 +16,7 @@ export const rooms = [
         title: 'Offensive Security Intro',
         platform: 'TryHackMe',
         platformIcon: Terminal,
-        desc: 'Hack your first website (legally in a safe environment) and experience an ethical hacker\'s job.',
+        desc: 'Piratez votre premier site web (légalement et dans un environnement sécurisé) et découvrez le métier de hacker éthique.',
         tags: ['Web', 'Auth'],
         link: 'https://tryhackme.com/room/offensivesecurityintro'
     },
@@ -25,7 +25,7 @@ export const rooms = [
         title: 'Dig Dug',
         platform: 'TryHackMe',
         platformIcon: Shield,
-        desc: 'Turns out this machine is a DNS server - it\'s time to get your shovels out!',
+        desc: 'Il s\'avère que cette machine est un serveur DNS - il est temps de sortir les pelles!',
         tags: ['DNS'],
         link: 'https://www.root-me.org/en/rooms/linux-privesc'
     },
@@ -34,7 +34,7 @@ export const rooms = [
         title: 'Neighbor',
         platform: 'TryHackMe',
         platformIcon: Laptop2,
-        desc: 'Check out our new cloud service, Authentication Anywhere. Can you find other user\'s secrets?',
+        desc: 'Découvrez notre nouveau service cloud, Authentication Anywhere. Saurez-vous trouver les secrets des autres utilisateurs ?',
         tags: ['Auth', 'Cloud'],
     }
 ];
