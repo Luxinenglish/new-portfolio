@@ -19,21 +19,18 @@ export const RoomsSection = () => (
                         </h2>
                     </div>
                 </div>
-                <p className="text-sm text-green-400/80 mt-3 max-w-3xl">
-                    Cards list of rooms published on different platforms and challenges solved with links and short descriptions.
-                </p>
             </header>
 
             <main className="space-y-8 sm:space-y-10">
                 <section>
                     <h3 className="text-lg sm:text-xl font-bold text-green-300 mb-4">$ ls rooms/</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
                         {rooms.map((r) => {
                             const Icon = r.platformIcon || Globe;
                             return (
                                 <article
                                     key={r.id}
-                                    className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg hover:scale-102 transition-transform duration-200 flex"
+                                    className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg hover:scale-102 transition-transform duration-200 flex backdrop-blur-sm"
                                 >
                                     <div className="flex-shrink-0 flex items-start">
                                         <div className="p-2 sm:p-3 bg-green-500/10 border border-green-500/20 rounded">
@@ -87,7 +84,7 @@ export const RoomsSection = () => (
                         {challenges.map((c) => (
                             <article
                                 key={c.id}
-                                className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg transform transition-transform duration-200 hover:-translate-y-1 sm:hover:-translate-y-2"
+                                className="min-h-[120px] sm:min-h-[140px] border-2 border-green-500/30 bg-black/50 p-3 sm:p-4 md:p-5 rounded-lg transform transition-transform duration-200 hover:-translate-y-1 sm:hover:-translate-y-2 backdrop-blur-sm"
                             >
                                 <div className="flex items-start justify-between">
                                     <div className="pr-3 flex-1">
