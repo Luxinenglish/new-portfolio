@@ -130,6 +130,30 @@ export const WhoamiSection = () => (
                             </div>
                         </ul>
                     </div>
+                    <div className="border-l-2 border-green-500/50 pl-4">
+                        <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ ls cat badges.txt</h3>
+                        <p>Mes differents badges :</p>
+                        <ul className="space-y-2 text-green-400/90">
+                            <div className="w-full">
+                                <iframe
+                                    src="https://assets.tryhackme.com/room-badges/8120871ade4393392d24be9b5fe95621.png"
+                                    title="TryHackMe Badges"
+                                    className="border-0 w-full h-24 sm:h-32 md:h-40"
+                                    style={{ minHeight: '80px' }}
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div className="w-full">
+                                <iframe
+                                    src="https://assets.tryhackme.com/room-badges/2ca03ca66999f91cd03aebdc3b47c50f.png"
+                                    title="TryHackMe Badges"
+                                    className="border-0 w-full h-24 sm:h-32 md:h-40"
+                                    style={{ minHeight: '80px' }}
+                                    loading="lazy"
+                                />
+                            </div>
+                        </ul>
+                    </div>
 
                     <div className="pt-4 border-t border-green-500/30">
                         <p className="text-green-500 text-xs sm:text-sm">
