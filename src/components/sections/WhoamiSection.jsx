@@ -2,7 +2,24 @@
 import React from 'react';
 import { Terminal } from 'lucide-react';
 
-export const WhoamiSection = () => (
+export const WhoamiSection = () => {
+  React.useEffect(() => {
+    const carousel = document.getElementById('badgeCarousel');
+    if (!carousel) return;
+
+    const autoScroll = setInterval(() => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+      setTimeout(() => {
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(autoScroll);
+  }, []);
+
+  return (
     <section className="min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-5xl mx-auto">
             <div className="border-2 border-green-500/30 bg-black/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm">
@@ -134,26 +151,85 @@ export const WhoamiSection = () => (
                         <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ cat badges.txt</h3>
                         <p>Mes differents badges :</p>
                         <ul className="space-y-2 text-green-400/90">
-                            <div className="w-full">
-                                <iframe
+                            <div className="w-full relative px-8">
+                              <div id="badgeCarousel" className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory py-2 scrollbar-hide">
+                                <img
                                     src="https://assets.tryhackme.com/room-badges/8120871ade4393392d24be9b5fe95621.png"
-                                    title="TryHackMe Badges"
-                                    className="border-0 w-full h-24 sm:h-32 md:h-40"
-                                    style={{ minHeight: '80px' }}
+                                  alt="TryHackMe badge 1"
+                                  className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
+                                    loading="lazy"
+                                />
+                                <img
+                                    src="https://assets.tryhackme.com/room-badges/2ca03ca66999f91cd03aebdc3b47c50f.png"
+                                  alt="TryHackMe badge 2"
+                                  className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
+                                    loading="lazy"
+                                />
+                                  <img
+                                      src="https://assets.tryhackme.com/room-badges/46e880f8b0614ad775481e117a4ab1b2.png"
+                                      alt="TryHackMe badge 3"
+                                      className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
+                                      loading="lazy"
+                                  />
+                                <img
+                                    src="https://assets.tryhackme.com/room-badges/8120871ade4393392d24be9b5fe95621.png"
+                                  alt="TryHackMe badge 1"
+                                  className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
+                                    loading="lazy"
+                                />
+                                <img
+                                    src="https://assets.tryhackme.com/room-badges/2ca03ca66999f91cd03aebdc3b47c50f.png"
+                                  alt="TryHackMe badge 2"
+                                  className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
+                                    loading="lazy"
+                                />
+                                <img
+                                    src="https://assets.tryhackme.com/room-badges/46e880f8b0614ad775481e117a4ab1b2.png"
+                                    alt="TryHackMe badge 3"
+                                    className="w-48 h-24 sm:w-56 sm:h-32 md:w-64 md:h-40 object-contain snap-center flex-shrink-0"
                                     loading="lazy"
                                 />
                             </div>
-                            <div className="w-full">
-                                <iframe
-                                    src="https://assets.tryhackme.com/room-badges/2ca03ca66999f91cd03aebdc3b47c50f.png"
-                                    title="TryHackMe Badges"
-                                    className="border-0 w-full h-24 sm:h-32 md:h-40"
-                                    style={{ minHeight: '80px' }}
-                                    loading="lazy"
-                                />
+
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  const carousel = document.getElementById('badgeCarousel');
+                                  if (carousel) {
+                                    const scrollAmount = carousel.scrollLeft - 300;
+                                    if (scrollAmount < 0) {
+                                      carousel.scrollLeft = carousel.scrollWidth / 2;
+                                    }
+                                    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+                                  }
+                                }}
+                                className="absolute -left-2 top-1/2 -translate-y-1/2 bg-green-500/20 hover:bg-green-500/30 text-green-300 p-2 rounded-full z-10"
+                                aria-label="Previous badges"
+                              >
+                                ‹
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  const carousel = document.getElementById('badgeCarousel');
+                                  if (carousel) {
+                                    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+                                    setTimeout(() => {
+                                      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+                                        carousel.scrollLeft = 0;
+                                      }
+                                    }, 500);
+                                  }
+                                }}
+                                className="absolute -right-2 top-1/2 -translate-y-1/2 bg-green-500/20 hover:bg-green-500/30 text-green-300 p-2 rounded-full z-10"
+                                aria-label="Next badges"
+                              >
+                                ›
+                              </button>
                             </div>
                         </ul>
                     </div>
+
 
                     <div className="pt-4 border-t border-green-500/30">
                         <p className="text-green-500 text-xs sm:text-sm">
@@ -164,4 +240,9 @@ export const WhoamiSection = () => (
             </div>
         </div>
     </section>
-);
+    );
+};
+
+
+
+
