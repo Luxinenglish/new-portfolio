@@ -131,7 +131,7 @@ export const WhoamiSection = () => (
                         </ul>
                     </div>
                     <div className="border-l-2 border-green-500/50 pl-4">
-                        <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ ls cat badges.txt</h3>
+                        <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ cat badges.txt</h3>
                         <p>Mes differents badges :</p>
                         <ul className="space-y-2 text-green-400/90">
                             <div className="w-full">
