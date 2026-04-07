@@ -76,7 +76,7 @@ export const WhoamiSection = () => {
                     <div className="border-l-2 border-green-500/50 pl-4">
                         <h3 className="text-green-300 font-bold mb-3 text-sm sm:text-base md:text-lg">$ cat objectifs.txt</h3>
                         <p className="text-green-400/90 leading-relaxed">
-                            Devenir pentester professionnel. Actuellement à la recherche d'un stage de 6 semaines pour approfondir mes compétences en sécurité informatique.
+                            Devenir pentester professionnel.
                         </p>
                     </div>
                     <div className="border-l-2 border-green-500/50 pl-4">

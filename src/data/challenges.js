@@ -35,9 +35,33 @@ export const challenges = [
     {
         id: 'c4',
         title: 'XSS - Stockée 1\n',
-        difficulty: 'Easy',
+        difficulty: 'Medium',
         desc: 'Volez le cookie de session de l\'administrateur et utilisez le pour valider l\'épreuve.',
         tags: ['Web', 'XSS'],
         link: 'https://www.root-me.org/fr/Challenges/Web-Client/XSS-Stockee-1'
+    },
+    {
+        id: 'c5',
+        title: 'SQL injection - Authentification\n',
+        difficulty: 'Medium',
+        desc: 'Retrouvez le mot de passe de l’administrateur.',
+        tags: ['Web', 'SQL', 'Server'],
+        link: 'https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-Authentification'
+    },
+    {
+        id: 'c6',
+        title: 'FTP - Authentification\n',
+        difficulty: 'Very-Easy',
+        desc: 'Un échange authentifié de fichier réalisé grâce au protocole FTP. Retrouvez le mot de passe utilisé par l’utilisateur.',
+        tags: ['Network', 'FTP', 'Auth'],
+        link: 'https://www.root-me.org/fr/Challenges/Reseau/FTP-Authentification'
+    },
+    {
+        id: 'c7',
+        title: 'Twitter Secret Messages\n',
+        difficulty: 'Very-Easy',
+        desc: 'Nous soupçonnons que ce tweet cache un lieu de rendez-vous. Aidez-nous à le retrouver.',
+        tags: ['Steganography', 'Crypto', 'Social Media'],
+        link: 'https://www.root-me.org/fr/Challenges/Steganographie/Twitter-Secret-Messages'
     }
 ];
