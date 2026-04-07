@@ -108,6 +108,14 @@ export const WhoamiSection = () => {
                                 Association pour la Promotion du Libre, de l'Open Source et de la Souveraineté Numérique
                             </p>
                         </div>
+                        <div className="text-green-400/90">
+                            <p className="mb-2">
+                                <span className="text-green-500">drwxr-xr-x</span> <a href="#" className="text-green-300 hover:text-green-200 underline">MDL LAMACHE</a>
+                            </p>
+                            <p className="text-xs sm:text-sm pl-8 text-green-400/70">
+                                Membre du Conseil d'administration pendant 2 ans puis président temporaire au sein de la maison des lycéens du lycée La Mache
+                            </p>
+                        </div>
                     </div>
                     {/* RECHERCHE DE STAGE */}
                     {/*<div className="border-l-2 border-green-500/50 pl-4">
