@@ -14,7 +14,7 @@ export const BOOT_MESSAGES = [
     '> Access granted. Launching interface...'
 ];
 
-export const NAV_SECTIONS = ['home', 'projects', 'skills', 'whoami', 'rooms'];
+export const NAV_SECTIONS = ['home', 'projects', 'skills', 'whoami', 'rooms', 'photos', 'cv'];
 
 export const SOCIAL_LINKS = [
     {

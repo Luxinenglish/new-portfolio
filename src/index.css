@@ -25,11 +25,12 @@ code {
 }
 
 .glitch {
-    animation: glitch 0.3s infinite;
+    animation: glitch 0.5s steps(1) infinite;
+    will-change: transform;
 }
 
 .glitch:hover {
-    animation: glitch 0.1s infinite;
+    animation: glitch 0.15s steps(1) infinite;
 }
 
 @keyframes luxFade {
@@ -79,15 +80,27 @@ code {
 
 .lux-animation {
     animation: luxFade 3s ease-in-out forwards;
+    will-change: opacity, transform;
 }
 
 .lux-u-zoom {
     display: inline-block;
     animation: zoomIntoU 3s ease-in-out 0s forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes scanline {
+    0%, 100% { opacity: 0.04; }
+    50% { opacity: 0.08; }
+}
+
+.scanline {
+    animation: scanline 4s ease-in-out infinite;
+    will-change: opacity;
 }
 
 @media (max-width: 640px) {
     .glitch {
-        animation: glitch 0.5s infinite;
+        animation: glitch 0.5s steps(1) infinite;
     }
 }

@@ -13,9 +13,10 @@ import { ProjectsSection } from './components/sections/ProjectsSection';
 import { SkillsSection } from './components/sections/SkillsSection';
 import { WhoamiSection } from './components/sections/WhoamiSection';
 import { RoomsSection } from './components/sections/RoomsSection';
+import { CVSection } from './components/sections/CVSection';
+import { PhotosSection } from './components/sections/PhotosSection';
 import { useBootSequence } from './hooks/useBootSequence';
 import { useTypewriter } from './hooks/useTypewriter';
-import { useMatrixRain } from './hooks/useMatrixRain';
 import { FULL_TEXT } from './utils/constants';
 
 export default function HackerPortfolio() {
@@ -27,7 +28,6 @@ export default function HackerPortfolio() {
 
     const { bootSequence, showLux, showContent } = useBootSequence();
     const displayText = useTypewriter(FULL_TEXT, showContent);
-    const matrixRain = useMatrixRain(isWinter);
 
     const handleNavigate = (section) => {
         setCurrentSection(section);
@@ -49,10 +49,10 @@ export default function HackerPortfolio() {
             {showContent && (
                 <>
                     {/* Matrix Rain / Snow Effect */}
-                    <MatrixRain matrixRain={matrixRain} isWinter={isWinter} />
+                    <MatrixRain isWinter={isWinter} />
 
                     {/* Scanline Effect */}
-                    <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-transparent via-green-500/5 to-transparent animate-pulse" />
+                    <div className="fixed inset-0 pointer-events-none bg-gradient-to-b from-transparent via-green-500 to-transparent scanline" />
 
                     {/* Navigation */}
                     <Navigation
@@ -77,6 +77,10 @@ export default function HackerPortfolio() {
                     {currentSection === 'whoami' && <WhoamiSection />}
 
                     {currentSection === 'rooms' && <RoomsSection />}
+
+                    {currentSection === 'photos' && <PhotosSection />}
+
+                    {currentSection === 'cv' && <CVSection />}
 
                     {/* Footer */}
                     <Footer />
